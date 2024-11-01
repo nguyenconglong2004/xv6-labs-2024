@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "types.h": "c",
+        "user.h": "c",
+        "sysinfo.h": "c",
+        "defs.h": "c"
+    }
+}

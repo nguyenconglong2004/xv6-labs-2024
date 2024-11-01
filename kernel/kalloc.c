@@ -90,4 +90,14 @@ kalloc(void)
 #endif
   return (void*)r;
 }
+uint64 get_freemem() {
+    struct run *r;
+    uint free_mem = 0;
+    acquire(&kmem.lock);
+    for (r = kmem.freelist; r; r = r->next) {
+        free_mem += PGSIZE;  // Add the size of each page
+    }
+    release(&kmem.lock);
+    return free_mem;
+}
 
