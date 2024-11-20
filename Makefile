@@ -211,7 +211,6 @@ ifeq ($(LAB),lock)
 UPROGS += \
 	$U/_stats
 endif
-
 ifeq ($(LAB),traps)
 UPROGS += \
 	$U/_call\
